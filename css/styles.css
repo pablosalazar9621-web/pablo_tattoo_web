@@ -1,0 +1,316 @@
+/* ====================================
+   VARIABLES Y COLORES GLOBALES
+   ==================================== */
+:root {
+    --primary-color: #c41e3a;      /* Rojo tatuaje */
+    --dark-color: #1a1a1a;         /* Negro muy oscuro */
+    --gray-color: #737373;         /* Gris medio */
+    --accent-color: #8b7355;       /* Marrón oscuro */
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+}
+
+/* ====================================
+   ESTILOS GLOBALES
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ====================================
+   NAVBAR
+   ==================================== */
+.navbar {
+    background-color: var(--dark-color) !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-brand span {
+    vertical-align: middle;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* ====================================
+   HERO SECTION
+   ==================================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
+    overflow: hidden;
+}
+
+.hero-content-wrapper {
+    min-height: 100vh;
+    margin-top: 60px;
+}
+
+.hero-left {
+    background-color: var(--primary-color);
+    padding: 60px 40px;
+}
+
+.hero-right {
+    background: linear-gradient(135deg, #5a5a5a 0%, #3a3a3a 100%);
+    padding: 60px 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ====================================
+   BOTONES PERSONALIZADOS
+   ==================================== */
+.btn-custom-primary,
+.btn-custom-secondary {
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-custom-primary {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-custom-primary:hover {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.btn-custom-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-custom-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ====================================
+   TAGLINE SECTION
+   ==================================== */
+.tagline-section {
+    background: linear-gradient(135deg, #2a2a2a 0%, var(--dark-color) 100%);
+    border-top: 1px solid rgba(196, 30, 58, 0.3);
+    border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.tagline-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.quote-mark {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin: 0 10px;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 992px) {
+    .hero-left,
+    .hero-right {
+        padding: 40px 30px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .tagline-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-left {
+        order: 2;
+        padding: 40px 20px;
+        min-height: auto;
+        padding-top: 80px;
+    }
+
+    .hero-right {
+        order: 1;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .btn-custom-primary,
+    .btn-custom-secondary {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+
+    .tagline-text {
+        font-size: 1.3rem;
+    }
+
+    .quote-mark {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .btn-custom-primary,
+    .btn-custom-secondary {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+
+    .tagline-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* ====================================
+   UTILIDADES
+   ==================================== */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}

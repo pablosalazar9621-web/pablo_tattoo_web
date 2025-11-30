@@ -1,0 +1,366 @@
+/* ====================================
+   BIOGRAFÍA PAGE STYLES
+   ==================================== */
+
+.bio-header {
+    background: linear-gradient(135deg, #2a2a2a 0%, var(--dark-color) 100%);
+    border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ====================================
+   BIO SECTION
+   ==================================== */
+.bio-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
+}
+
+.bio-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.bio-content {
+    padding-right: 2rem;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bio-paragraph {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+}
+
+.bio-paragraph.bio-final {
+    font-style: italic;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ====================================
+   HIGHLIGHT CARDS
+   ==================================== */
+.bio-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: rgba(196, 30, 58, 0.1);
+    border: 1px solid rgba(196, 30, 58, 0.3);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    background: rgba(196, 30, 58, 0.15);
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(196, 30, 58, 0.15);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.highlight-content h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.highlight-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ====================================
+   VALUES SECTION
+   ==================================== */
+.values-section {
+    background: linear-gradient(135deg, #2a2a2a 0%, var(--dark-color) 100%);
+    border-top: 1px solid rgba(196, 30, 58, 0.3);
+    border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+}
+
+.value-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(196, 30, 58, 0.2);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(196, 30, 58, 0.2);
+    background: rgba(196, 30, 58, 0.05);
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.value-title {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.value-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ====================================
+   SKILLS SECTION
+   ==================================== */
+.skills-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(196, 30, 58, 0.2);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: var(--primary-color);
+    background: rgba(196, 30, 58, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(196, 30, 58, 0.15);
+}
+
+.skill-title {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.skill-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* ====================================
+   FOOTER
+   ==================================== */
+.footer {
+    background-color: #000000;
+    border-top: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.footer h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .bio-section-title {
+        font-size: 2rem;
+    }
+
+    .bio-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .bio-section-title {
+        font-size: 1.8rem;
+    }
+
+    .bio-paragraph {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .highlight-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-card:hover {
+        transform: translateX(0) translateY(-5px);
+    }
+
+    .highlight-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .value-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .bio-section-title {
+        font-size: 1.5rem;
+    }
+
+    .bio-paragraph {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .highlight-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .highlight-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .highlight-content h5 {
+        font-size: 1rem;
+    }
+
+    .highlight-content p {
+        font-size: 0.85rem;
+    }
+
+    .value-card {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .value-icon {
+        font-size: 2.5rem;
+    }
+
+    .value-title {
+        font-size: 1rem;
+    }
+
+    .skill-title {
+        font-size: 1rem;
+    }
+
+    .skill-description {
+        font-size: 0.85rem;
+    }
+}

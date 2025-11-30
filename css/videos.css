@@ -1,0 +1,275 @@
+/* ====================================
+   VIDEOS PAGE STYLES
+   ==================================== */
+
+.videos-header {
+    background: linear-gradient(135deg, #2a2a2a 0%, var(--dark-color) 100%);
+    border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ====================================
+   VIDEOS SECTION
+   ==================================== */
+.videos-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
+}
+
+.video-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(196, 30, 58, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    hover: none;
+}
+
+.video-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(196, 30, 58, 0.2);
+    transform: translateY(-8px);
+}
+
+/* ====================================
+   VIDEO CONTAINER
+   ==================================== */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+.video-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====================================
+   VIDEO OVERLAY
+   ==================================== */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(196, 30, 58, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+
+.btn-play {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.btn-play:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* ====================================
+   VIDEO DURATION
+   ==================================== */
+.video-duration {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ====================================
+   VIDEO INFO
+   ==================================== */
+.video-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.video-description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.video-meta {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.video-date {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.video-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ====================================
+   MODAL
+   ==================================== */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--dark-color);
+    border: none;
+}
+
+.modal-body {
+    background-color: var(--dark-color);
+}
+
+#modalVideo {
+    border-radius: 8px;
+}
+
+/* ====================================
+   FOOTER
+   ==================================== */
+.footer {
+    background-color: #000000;
+    border-top: 1px solid rgba(196, 30, 58, 0.3);
+}
+
+.footer h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .btn-play {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .video-card {
+        margin-bottom: 1rem;
+    }
+
+    .btn-play {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .video-info {
+        padding: 1rem;
+    }
+
+    .video-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .btn-play {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .video-duration {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+
+    .video-info {
+        padding: 0.8rem;
+    }
+
+    .video-title {
+        font-size: 0.95rem;
+    }
+
+    .video-description {
+        font-size: 0.85rem;
+    }
+}

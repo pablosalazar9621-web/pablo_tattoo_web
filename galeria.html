@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Pablo Salazar</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="recursos/logo.png" alt="Logo Pablo Salazar" height="40" class="me-2">
+                <span>Pablo Salazar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeria.html">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Líneas -->
+    <section class="galeria-section pt-5" style="margin-top: 60px;">
+        <div class="container-fluid">
+            <div class="galeria-header mb-5">
+                <h2 class="galeria-title">Líneas</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="row g-3 mb-5">
+                <div class="col-lg-6 col-md-12">
+                    <div class="galeria-item-large">
+                        <img src="recursos/galeria/lineas/1105ca01-22bc-425f-844e-790a6a677fb0.JPG" alt="Tatuaje líneas" class="img-fluid galeria-img">
+                        <div class="galeria-overlay">
+                            <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/lineas/11cde591-69fc-40fb-8ad5-a884f54f332a.JPG" alt="Tatuaje líneas" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/lineas/1948b908-cf9f-40f0-88c9-082fb5105651.JPG" alt="Tatuaje líneas" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/lineas/1a0c66b8-6bff-4685-8277-d412ba97b4d0.JPG" alt="Tatuaje líneas" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/lineas/2ef6bf7c-7710-4052-9bd7-d3c902e0d4a3.JPG" alt="Tatuaje líneas" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Puntillismo -->
+    <section class="galeria-section py-5">
+        <div class="container-fluid">
+            <div class="galeria-header mb-5">
+                <h2 class="galeria-title">Puntillismo</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="row g-3 mb-5">
+                <div class="col-lg-6 col-md-12">
+                    <div class="galeria-item-large">
+                        <img src="recursos/galeria/puntillismo/28054a0e-8beb-4e9c-90d3-c589430c6e0d.JPG" alt="Tatuaje puntillismo" class="img-fluid galeria-img">
+                        <div class="galeria-overlay">
+                            <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/puntillismo/41740a0b-d2cd-40c2-b80a-52f9289b4475.JPG" alt="Tatuaje puntillismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/puntillismo/4e38753b-9713-408e-b5a8-4f197a46a888.JPG" alt="Tatuaje puntillismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/puntillismo/b96f251b-6544-4f6c-aecb-a70b28970f3d.JPG" alt="Tatuaje puntillismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/puntillismo/f06ceb23-1746-499b-b8c1-a8dc4d072a71.JPG" alt="Tatuaje puntillismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Semi Realismo -->
+    <section class="galeria-section py-5">
+        <div class="container-fluid">
+            <div class="galeria-header mb-5">
+                <h2 class="galeria-title">Semi Realismo</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="row g-3 mb-5">
+                <div class="col-lg-6 col-md-12">
+                    <div class="galeria-item-large">
+                        <img src="recursos/galeria/semi realismo/66268cda-e66a-461a-8bfa-1a62b25a8299.JPG" alt="Tatuaje semi realismo" class="img-fluid galeria-img">
+                        <div class="galeria-overlay">
+                            <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/semi realismo/81f8d4b5-bfb1-4e3f-9ae3-03aa27cd664b.JPG" alt="Tatuaje semi realismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/semi realismo/ad19dee6-fee2-4c68-9b31-b67b4d963b17.JPG" alt="Tatuaje semi realismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/semi realismo/b464a94f-31b3-48b0-92a0-59845dd48d42.JPG" alt="Tatuaje semi realismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="galeria-item">
+                                <img src="recursos/galeria/semi realismo/c7506824-46f0-4fb7-ba9d-4afec2a8262f.JPG" alt="Tatuaje semi realismo" class="img-fluid galeria-img">
+                                <div class="galeria-overlay">
+                                    <button class="btn-galeria-view" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadModalImage(this)">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para ampliar imagen -->
+    <div class="modal fade" id="galeriaModal" tabindex="-1" aria-labelledby="galeriaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-secondary">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" alt="Tatuaje" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

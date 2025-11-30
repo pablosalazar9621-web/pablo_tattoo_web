@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pablo Salazar</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="recursos/logo.png" alt="Logo Pablo Salazar" height="40" class="me-2">
+                <span>Pablo Salazar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="biografia.html">Biografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Contacto -->
+    <section class="contact-header pt-5 pb-5" style="margin-top: 60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="page-title mb-3">Contacto</h1>
+                    <p class="page-subtitle text-white-50">
+                        ¿Tienes una idea para tu próximo tatuaje? Cuéntame sobre tu proyecto
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Principal -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Formulario -->
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <h2 class="form-title mb-4">Información Personal</h2>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <!-- Nombre Completo -->
+                            <div class="mb-4">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input 
+                                    type="text" 
+                                    class="form-control form-control-custom" 
+                                    id="nombre" 
+                                    name="nombre" 
+                                    placeholder="Tu nombre completo"
+                                    required>
+                                <small class="form-text">Este campo es requerido</small>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input 
+                                    type="email" 
+                                    class="form-control form-control-custom" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="tu@correo.com"
+                                    required>
+                                <small class="form-text">Este campo es requerido</small>
+                            </div>
+
+                            <!-- Teléfono/WhatsApp -->
+                            <div class="mb-4">
+                                <label for="whatsapp" class="form-label">Número de WhatsApp</label>
+                                <input 
+                                    type="tel" 
+                                    class="form-control form-control-custom" 
+                                    id="whatsapp" 
+                                    name="whatsapp" 
+                                    placeholder="+57 3XX XXXXXXX"
+                                    required>
+                                <small class="form-text">Este campo es requerido</small>
+                            </div>
+
+                            <!-- Asunto -->
+                            <div class="mb-4">
+                                <label for="asunto" class="form-label">Asunto</label>
+                                <select class="form-select form-control-custom" id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="cotizacion">Cotización de Tatuaje</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="diseño">Solicitud de Diseño</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <small class="form-text">Este campo es requerido</small>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea 
+                                    class="form-control form-control-custom" 
+                                    id="mensaje" 
+                                    name="mensaje" 
+                                    rows="6"
+                                    placeholder="En el siguiente campo, escriba el mensaje que quiere dejarle al artista."
+                                    required></textarea>
+                                <small class="form-text">Este campo es requerido</small>
+                            </div>
+
+                            <!-- Botón Enviar -->
+                            <button type="submit" class="btn btn-submit w-100">
+                                <i class="fas fa-paper-plane me-2"></i> Enviar Mensaje
+                            </button>
+
+                            <!-- Mensaje de éxito -->
+                            <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+                                <i class="fas fa-check-circle me-2"></i> ¡Mensaje enviado correctamente! Me pondré en contacto pronto.
+                            </div>
+
+                            <!-- Mensaje de error -->
+                            <div id="errorMessage" class="alert alert-danger mt-4" style="display: none;">
+                                <i class="fas fa-exclamation-circle me-2"></i> Hubo un error al enviar el mensaje. Por favor intenta de nuevo.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="col-lg-4">
+                    <div class="contact-info-wrapper">
+                        <h2 class="info-title mb-4">Información de Contacto</h2>
+
+                        <!-- WhatsApp -->
+                        <div class="contact-item">
+                            <div class="contact-icon whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>WhatsApp</h5>
+                                <p class="contact-text">+57 317 502 8764</p>
+                                <a href="https://wa.me/573175028764?text=Hola%20Pablo%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20un%20tatuaje" target="_blank" class="contact-link">
+                                    Enviar mensaje <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon email-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p class="contact-text">pablo@tatuajes.com</p>
+                                <a href="mailto:pablo@tatuajes.com" class="contact-link">
+                                    Enviar correo <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Ubicación -->
+                        <div class="contact-item">
+                            <div class="contact-icon location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Ubicación</h5>
+                                <p class="contact-text">Pasto, Nariño, Colombia</p>
+                            </div>
+                        </div>
+
+                        <!-- Horario -->
+                        <div class="contact-item">
+                            <div class="contact-icon schedule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Horario</h5>
+                                <p class="contact-text">
+                                    Lun - Vie: 10:00 - 19:00<br>
+                                    Sáb: 10:00 - 17:00<br>
+                                    Dom: Cerrado
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="social-section">
+                            <h5 class="mb-3">Sígueme en Redes</h5>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon-btn instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon-btn facebook" title="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://wa.me/573175028764" class="social-icon-btn whatsapp" target="_blank" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="map-section">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.0892697854006!2d-77.2827!3d1.2136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f5f5f5f5f5%3A0x5f5f5f5f5f5f5f5f!2sPasto%2C%20Nari%C3%B1o%2C%20Colombia!5e0!3m2!1ses!2s!4v1234567890" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Pablo Salazar</h5>
+                    <p class="text-white-50">Tatuador Profesional desde 2015</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="galeria.html" class="text-white-50 text-decoration-none">Portafolio</a></li>
+                        <li><a href="videos.html" class="text-white-50 text-decoration-none">Videos</a></li>
+                        <li><a href="biografia.html" class="text-white-50 text-decoration-none">Biografía</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 text-decoration-none me-3">Instagram</a>
+                        <a href="#" class="text-white-50 text-decoration-none me-3">Facebook</a>
+                        <a href="https://wa.me/573175028764" class="text-white-50 text-decoration-none" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2025 Pablo Salazar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
